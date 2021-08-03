@@ -2,7 +2,7 @@
 
 ## Goal
 
-  - Learn about
+  # Learn about
 
   - 1. The exploratory data analysis technique.
 
