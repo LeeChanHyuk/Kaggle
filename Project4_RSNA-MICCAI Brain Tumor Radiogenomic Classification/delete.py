@@ -1,4 +1,19 @@
 import os
+<<<<<<< HEAD
+
+# The folder path that i want to change
+file_path = 'D:/RSNA_ASNR_MICCAI_BraTS2021_TrainingData_16July2021/RSNA_ASNR_MICCAI_BraTS2021_TrainingData_16July2021'
+file_names = os.listdir(file_path)
+dirs = ['FLAIR', 'T1', 'T1CE', 'T2', 'SEG']
+file_name_sort = ['FLAIR0.jpg', 'SEG1.jpg', 'T1CE3.jpg','T12.jpg','T24.jpg']
+for folder_name in file_names: # folder name
+    for sort in dirs:
+        for file in os.listdir(os.path.join(file_path, folder_name, sort)):
+            os.remove(os.path.join(file_path,folder_name,sort,file))
+        os.rmdir(os.path.join(file_path, folder_name,sort))
+    #for sort in file_name_sort:
+    #    os.remove(os.path.join(file_path, folder_name, sort))
+=======
 import json
 import glob
 import random
@@ -88,3 +103,4 @@ def load_dicom_file(index):
     load_nib(index)
 
 load_nib()
+>>>>>>> 4f9ceabbe69081da49aea3517768d00108288580

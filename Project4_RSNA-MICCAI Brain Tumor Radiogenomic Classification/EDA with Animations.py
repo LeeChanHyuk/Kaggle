@@ -21,7 +21,7 @@ def load_dicom(path):
     data = dicom.pixel_array
     data = data - np.min(data)
     if np.max(data) != 0:
-        data = data / np.max(data)
+        data = data / np.max(data) # 여기서 왜 / (np.max(data) - np.min(data) 로 하지 않았지?
     data = (data * 255).astype(np.uint8)
     return data
 
